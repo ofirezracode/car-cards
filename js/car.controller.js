@@ -7,7 +7,6 @@ function onInit() {
 function renderCars() {
   let carsHTML = ''
   const cars = createCars()
-  console.log('cars', cars)
 
   carsHTML += cars
     .map((car) => {
@@ -22,7 +21,7 @@ function renderCars() {
       carHTML += car.desc.map((para) => `<p class="card-para">${para}</p>`).join('')
 
       carHTML += `
-      <p class="card-price">${cars.price}</p>
+      <p class="card-price">$${car.price}</p>
       <button class="card-btn">Buy</button>
     </article>
     `
